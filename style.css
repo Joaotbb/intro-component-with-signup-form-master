@@ -10,29 +10,82 @@ html {
 
 main {
     display: flex;
+    max-width: 1240px;
+    justify-content: center;
+    margin: auto;
+    padding: 48px;
+    gap: 24px;
+}
+
+.background {
     background-image: url(./images/bg-intro-desktop.png);
     background-color: rgb(240, 104, 104);
-    padding: 48px;
+    width: 100%;
+
+}
+
+.max-width {
+    max-width: 960px;
+    display: flex;
 }
 
 
+.left-section {
+    max-width: 49.99%;
+    padding-right: 24px;
+    height: 100%;
+    padding-top: 140px;
+}
+
+
+.right-section {
+    width: 49.99%;  
+}
+
 h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 50px;
-    font: bold;
-    line-height:50px;
-    text-align: center;
+    font-size: 40px;
+    font:bolder;
+    line-height: 100%;
     color: white;
+       
 }
 
 
 p {
     font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: start;
     color: white;
+    text-align: left;
+
 }
 
+
+.hiden {
+    display: none;
+}
+
+.error-message {
+    text-align: right;
+    font-style: italic;
+    color: hsl(0, 100%, 74%);
+    font-size: small;
+    margin-top: 0px;
+
+}
+
+.error-incon {
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    
+
+}
+
+.relative {
+    position: relative;
+
+
+}
 
 
 .purple-button {
@@ -93,7 +146,10 @@ p {
     main {
         display: block;
         align-items: center;
-        }
+       
+    }
+
+   
         
 }
 
@@ -112,5 +168,28 @@ p {
         align-items: center;
         background-image: url(./images/bg-intro-mobile.png);
         }   
+
+        .left-section {
+            max-width:none;
+        }
+    
+        .right-section {
+            width: 100%;
+        
+        }
+        
+        h1 {
+            text-align: center;
+        }
+
+
+        p {
+            text-align: center;
+        }
+
+        .max-width {
+            display: block;
+        }
+
 }
 

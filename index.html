@@ -11,10 +11,12 @@
 </head>
 
 
-<body>
+<body class="background">
 
   <main class="two-columns">
-    <!-- left section -->
+    <div class="max-width">
+
+      <!-- left section -->
     <section class="left-section">
       <h1>
         Learn to code by watching others
@@ -35,20 +37,39 @@
       <div class="white-card">
               
           <!-- form inputs -->
-          <div style="width: 100%;">
-          
-            <input type="text" name="name" placeholder="First Name" class="form-input">
-            <input type="text" name="last_name" placeholder="Last Name" class="form-input">
-            <input type="text" name="email_adress" placeholder="Email Address" class="form-input">
-            <input type="text" name="password" placeholder="Password" class="form-input">
+          <div>
+            <div class="relative">
+              <input type="text" name="name" id="input-name" placeholder="First Name" class="form-input">
+              <img src="./images/icon-error.svg" class="error-incon" alt="error">
+              <p class="error-message hiden">First name can not be empty</p>
+            </div>
+           
 
+            <div class="relative">
+              <input type="text" name="last_name" id="input-last-name" placeholder="Last Name" class="form-input">
+              <img src="./images/icon-error.svg" class="error-incon" alt="error">
+              <p class="error-message hiden">Last name can not be empty</p>
+            </div>
+            
+
+            <div class="relative">
+              <input type="text" name="email_adress" id="input-email" placeholder="Email Address" class="form-input">
+              <img src="./images/icon-error.svg" class="error-incon" alt="error">
+              <p class="error-message hiden">Looks like this is not an email</p>
+            </div>
+            
+            <div class="relative">
+              <input type="text" name="password" placeholder="Password" id="input-password" class="form-input">
+              <img src="./images/icon-error.svg" class="error-incon" alt="error">
+              <p class="error-message hiden">Password can not be empty</p>
+            </div>
           </div>
 
           <!-- div with button and text -->
           
           <div>
 
-            <button class="green-button">
+            <button class="green-button" id="btn">
               <b>CLAIM YOUR FREE TRIAL</b>
             </button>
 
@@ -61,11 +82,10 @@
    
       
     </section>
-
-    
+    </div>
   </main>
   
-  
+  <script src="./index.js"></script>
  
 </body>
 </html>
