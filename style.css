@@ -64,6 +64,14 @@ p {
     display: none;
 }
 
+.border-red{
+    border-color: rgb(255, 0, 0);
+}
+
+.border-gray{
+    border-color: gray;
+}
+
 .error-message {
     text-align: right;
     font-style: italic;
@@ -119,7 +127,6 @@ p {
 .form-input {
     width: 100%;
     border-radius: 6px;
-    border-color: gray;
     border-style: solid;
     border-width: 1px;
     padding: 18px;
