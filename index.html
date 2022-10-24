@@ -1,91 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  
-  <title>Intro component with sign up form</title>
-  
-  <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-</head>
+    <title>Intro component with sign up form</title>
 
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<body class="background">
+  <body class="background">
+    <main class="two-columns">
+      <div class="max-width">
+        <!-- left section -->
+        <section class="left-section">
+          <h1>
+            Learn to code by watching others
+          </h1>
 
-  <main class="two-columns">
-    <div class="max-width">
+          <p class="secondary-text">
+            See how experienced developers solve problems in real-time. Watching
+            scripted tutorials is great, but understanding how developers think
+            is invaluable.
+          </p>
+        </section>
 
-      <!-- left section -->
-    <section class="left-section">
-      <h1>
-        Learn to code by watching others
-      </h1>
+        <!-- right section -->
+        <section class="right-section">
+          <button class="purple-button">
+            <b>Try it free 7 days</b>
+            then $20/mo. thereafter
+          </button>
 
-      <p class="secondary-text">
-        See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-      but understanding how developers think is invaluable. 
-      </p>
-    </section>
-    
-    <!-- right section -->
-    <section class="right-section">
-      <button class="purple-button">
-        <b>Try it free 7 days</b> then $20/mo. thereafter
-      </button>
-      
-      <div class="white-card">
-              
-          <!-- form inputs -->
-          <div>
-            <div class="relative">
-              <input type="text" name="name" id="input-name" placeholder="First Name" class="form-input">
-              <img src="./images/icon-error.svg" class="error-incon" alt="error">
-              <p class="error-message hiden">First name can not be empty</p>
+          <form class="white-card" name="theForm">
+            <!-- form inputs -->
+            <div>
+              <div class="relative">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="First Name"
+                  class="form-input border-gray"
+                />
+                <div name="error-message" class="hiden">
+                  <img
+                    src="./images/icon-error.svg"
+                    class="error-incon"
+                    alt="error"
+                  />
+                  <p class="error-message">First name can not be empty</p>
+                </div>
+              </div>
+
+              <div class="relative">
+                <input
+                  type="text"
+                  name="last_name"
+                  placeholder="Last Name"
+                  class="form-input border-gray"
+                />
+                <div name="error-message" class="hiden">
+                  <img
+                    src="./images/icon-error.svg"
+                    class="error-incon"
+                    alt="error"
+                  />
+                  <p class="error-message">
+                    Last name can not be empty
+                  </p>
+                </div>
+              </div>
+
+              <div class="relative">
+                <input
+                  type="email"
+                  name="email_adress"
+                  placeholder="Email Address"
+                  class="form-input border-gray"
+                />
+                <div name="error-message" class="hiden">
+                  <img
+                    src="./images/icon-error.svg"
+                    class="error-incon"
+                    alt="error"
+                  />
+                  <p class="error-message">
+                    Looks like this is not an email
+                  </p>
+                </div>
+              </div>
+
+              <div class="relative">
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  class="form-input border-gray"
+                />
+                <div name="error-message" class="hiden">
+                  <img
+                    src="./images/icon-error.svg"
+                    class="error-incon"
+                    alt="error"
+                  />
+                  <p class="error-message">
+                    Password can not be empty
+                  </p>
+                </div>
+              </div>
             </div>
-           
 
-            <div class="relative">
-              <input type="text" name="last_name" id="input-last-name" placeholder="Last Name" class="form-input">
-              <img src="./images/icon-error.svg" class="error-incon" alt="error">
-              <p class="error-message hiden">Last name can not be empty</p>
+            <!-- div with button and text -->
+
+            <div>
+              <button type="submit" class="green-button" id="btn">
+                <b>CLAIM YOUR FREE TRIAL</b>
+              </button>
+
+              <p class="terms">
+                By clicking the button, you are agreeing to our
+                <a>Terms and Services</a>
+              </p>
             </div>
-            
-
-            <div class="relative">
-              <input type="text" name="email_adress" id="input-email" placeholder="Email Address" class="form-input">
-              <img src="./images/icon-error.svg" class="error-incon" alt="error">
-              <p class="error-message hiden">Looks like this is not an email</p>
-            </div>
-            
-            <div class="relative">
-              <input type="text" name="password" placeholder="Password" id="input-password" class="form-input">
-              <img src="./images/icon-error.svg" class="error-incon" alt="error">
-              <p class="error-message hiden">Password can not be empty</p>
-            </div>
-          </div>
-
-          <!-- div with button and text -->
-          
-          <div>
-
-            <button class="green-button" id="btn">
-              <b>CLAIM YOUR FREE TRIAL</b>
-            </button>
-
-            <p class="terms">
-              By clicking the button, you are agreeing to our <a>Terms and Services</a>
-            </p>
-
-          </div>
+          </form>
+        </section>
       </div>
-   
-      
-    </section>
-    </div>
-  </main>
-  
-  <script src="./index.js"></script>
- 
-</body>
+    </main>
+
+    <script src="./index.js"></script>
+  </body>
 </html>

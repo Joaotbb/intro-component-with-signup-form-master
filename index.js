@@ -1,28 +1,36 @@
+let btn = document.getElementById('btn')
+const inputs = document.querySelectorAll('input')
 
-let btn =document.getElementById("btn")
-let inputName =document.getElementById("input-name")
-let inputLastName =document.getElementById("input-last-name")   
-let inputemail =document.getElementById("input-email")
-let inputpassword =document.getElementById("input-password")
+function validateEmail(email) {
+    return String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+  };
 
+btn.addEventListener('click', function (e) {
+  e.preventDefault()
+  inputs.forEach((input) => {
+   
+    if (input.name == "email_adress") {
+        if (validateEmail(input.value) == null){
+            input.classList.add('border-red')
+            input.classList.remove('border-gray')
+            input.nextElementSibling.classList.remove('hiden')
+        }
+    }
 
-btn.addEventListener("click",function(){
-// if(inputName.value=="") {
-//     inputName.classList.remove("hiden")
+    if (input.value == '') {
+      input.classList.add('border-red')
+      input.classList.remove('border-gray')
+      input.nextElementSibling.classList.remove('hiden')
+    }
 
-// }   else if(inputLastName.value=="") {
-//         console.log("lastname")
-        
-
-// }   else if(inputemail.value==""){
-//         console.log("emaiL")
-
-// }   else if(inputpassword.value=="") {
-//         console.log("password")
-
-// }   else {
-//     console.log("esta tudo preenchdo")
-// }
-
+    input.addEventListener('focus', function () {
+      input.classList.remove('border-red')
+      input.classList.add('border-gray')
+      input.nextElementSibling.classList.add('hiden')
+    })
+  })
 })
-
